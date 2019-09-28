@@ -1,0 +1,16 @@
+def sorting(s):
+
+    allAlpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1357902468"
+    l1 = []
+    l2 = list(allAlpha)
+    res = ""
+
+    for c in s:
+        i = allAlpha.index(c)
+        l1.append(i)
+        l2[i] = c
+    
+    for n in sorted(l1):
+        res += l2[n]
+    
+    return (res)
